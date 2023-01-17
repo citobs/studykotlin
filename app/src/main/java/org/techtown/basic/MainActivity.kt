@@ -1,6 +1,7 @@
 package org.techtown.basic
 
 import android.os.Bundle
+import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -17,9 +18,11 @@ class MainActivity : AppCompatActivity() {
         }
 
         button2.setOnClickListener {
+            //에러파악
+            val input1 : EditText? = null
             //사용자가 입력한 글자가 있다면 그 글자를 가져와라.
-            val input1 = input1.text.toString()
-            output1.text = "결과 : $input1"
+            val input2 = input1!!.text.toString()
+            output1.text = "결과 : $input2"
         }
 
 
